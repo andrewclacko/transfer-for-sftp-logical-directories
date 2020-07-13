@@ -27,17 +27,15 @@ Resources:
     Type: AWS::S3::Bucket
     Properties:
       AccessControl: Private
-      BucketName: !Sub
-        - ${StackId}-public-bucket
-        - StackId: !Ref StackId
+      BucketName: andyclark-public-bucket
+
 
   SubscribedBucket:
     Type: AWS::S3::Bucket
     Properties:
       AccessControl: Private
-      BucketName: !Sub
-        - ${StackId}-subscribe-bucket
-        - StackId: !Ref StackId
+      BucketName: andyclark-subscribe-bucket
+
 
   SampleData:
     Type: "Custom::SampleData"
